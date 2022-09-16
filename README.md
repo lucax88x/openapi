@@ -36,7 +36,7 @@ For authenticated requests you need an API token from your Livingdocs project.
 ## How to contribute
 Keep the same structure as our documentation [docs](https://docs.livingdocs.io/reference-docs/public-api/)
 Many API endpoints are still missing. Please mark the category as completed when all its endpoints are registered in the spec.
-- Project
+- Project ✅
 - Composition API
 - Publications 
 - Search
