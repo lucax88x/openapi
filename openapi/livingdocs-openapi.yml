@@ -16,7 +16,7 @@ tags:
       description: Docs
       url: docs.livingdocs.io/reference-docs/public-api/project/
   - name: Composition API
-    description: Composition
+    description: |
     externalDocs:
       description: Docs
       url: docs.livingdocs.io/reference-docs/public-api/composition-api/
@@ -31,12 +31,12 @@ tags:
       description: Docs
       url: docs.livingdocs.io/reference-docs/public-api/search/
   - name: Document Lists
-    description: Document Lists
+    description: |
     externalDocs:
       description: Docs
       url: docs.livingdocs.io/reference-docs/public-api/document-lists/
   - name: Document Categories
-    description: Document Categories
+    description: |
     externalDocs:
       description: Docs
       url: docs.livingdocs.io/reference-docs/public-api/document-categories/
@@ -66,7 +66,7 @@ tags:
       description: Docs
       url: docs.livingdocs.io/reference-docs/public-api/status/
   - name: Add Delivery Status
-    description: Add Delivery Status
+    description: |
     externalDocs:
       description: Docs
       url: docs.livingdocs.io/reference-docs/public-api/add-delivery-status/
@@ -115,6 +115,39 @@ paths:
           - Project
         summary: details and configuration of this project.
         operationId: getChannel
+        responses:
+          "200":
+           description: ok
+
+  /design:
+      get:
+        security: 
+        - bearerAuth: [public-api:read]
+        tags:
+          - Project
+        summary: details and configuration of this project.
+        operationId: getDefaultDesign
+        responses:
+          "200":
+           description: ok
+
+
+  /design/{designVersion}:
+      get:
+        security: 
+        - bearerAuth: [public-api:read]
+        parameters:
+        - name: designVersion
+          in: path
+          description: Optional design version. Will take the current design version of a channel if none is passed.
+          required: true
+          schema:
+            type: string
+            example: ""
+        tags:
+          - Project
+        summary: design versions of this project.
+        operationId: getDesign
         responses:
           "200":
            description: ok
