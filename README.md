@@ -1,11 +1,11 @@
 # OpenAPI Spec
 OpenAPI (Swagger) spec for Livingdocs Public API
 
-This file makes it very easy to test and share our API enpoints.
+This file makes it easy to test and share our API enpoints.
 
 ## Supported environments
-### edit.livingdocs.io
-### localhost (WIP)
+- service (edit.livingdocs.io)
+- localhost
 
 ## How to use it (for now)
 Import the openapi.yml file into insomnia as a design document, here you can test the APIs and add new endpoints.
@@ -38,7 +38,7 @@ Keep the same structure as our documentation [docs](https://docs.livingdocs.io/r
 Many API endpoints are still missing. Please mark the category as completed when all its endpoints are registered in the spec.
 - Project ✅
 - Composition API
-- Publications 
+- Publications (WIP 🚧)
 - Search
 - Document Lists
 - Document Categories
@@ -46,11 +46,13 @@ Many API endpoints are still missing. Please mark the category as completed when
 - Media Library
 - Imports
 - Sitemaps
-- Health
+- Health ✅
 - Add Delivery Status
 
 
 ## TODOs and future ideas
-- add all the api endpoints
+- add all the api endpoints from our docs
 - share the OpenAPI spec file on edit.livingdocs/api/openapi.yml
+- embedd the Swagger UI in our docs
+- support downstream
 
