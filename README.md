@@ -54,4 +54,5 @@ Many API endpoints are still missing. Please mark the category as completed when
 - add all the api endpoints from our docs
 - share the OpenAPI spec file on edit.livingdocs/api/openapi.json
 - embedd the Swagger UI in our docs
-- support downstream
+- support to extend downstream with downstream declaration
+- generate the spec by the server
