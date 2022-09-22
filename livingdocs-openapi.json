@@ -453,29 +453,61 @@
             },
             "in": "path",
             "required": true
-          },
-          {
-            "name": "fields",
-            "description": "A list of the properties which should be computed and returned. Default: ['systemdata', 'content', 'metadata', 'includes', 'html', 'design']",
-            "schema": {
-              "type": "array",
-              "items": {
-                "type": "string",
-                "enum": ["systemdata", "content", "metadata", "includes", "html", "design"]
-              }
-            },
-            "in": "query"
-          },
-          {
-            "name": "renditions",
-            "description": "A comma-separated list of rendition handles. Example: ?renditions=web,json",
-            "schema": {
-              "type": "string",
-              "default": ""
-            },
-            "in": "query"
           }
         ],
+        "requestBody": {
+           "content": {
+              "application/json": {
+                "example": {
+                  "fields": ["systemdata", "metadata", "content", "html", "includes", "design"],
+                  "metadata": {
+                    "preload": {"myMetadataProp": true}
+                  },
+                  "resolveIncludes": true,
+                  "renderOptions": {
+                    "renderDirectiveInfo": true,
+                    "decodeHtml": true
+                  }
+                },
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "fields": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "enum": ["systemdata", "metadata", "content", "html", "includes", "design"]
+                      }
+                    },
+                    "metadata": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "preload": {
+                          "type": "object"
+                        }
+                      }
+                    },
+                    "resolveIncludes": {
+                      "type": "boolean"
+                    },
+                    "renderOptions": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "renderDirectiveInfo": {
+                          "type": "boolean"
+                        },
+                        "decodeHtml": {
+                          "type": "boolean"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+        },
         "responses": {
           "200": {
             "description": "OK"
