@@ -292,19 +292,142 @@
             },
             "in": "query"
           },
+    "/api/beta/documents/latestPublications": {
+      "get": {
+        "security": [
+          {"bearerAuth": ["public-api:read"]}
+        ],
+        "tags": [
+          "Publications"
+        ],
+        "summary": "Latest Publications Beta",
+        "description": "This endpoint is the list equivalent of the previous one. The response is an array of objects with 4 possible top-level properties: systemdata, metadata, content, references",
+        "parameters": [
+          {
+            "name": "fields",
+            "description": "Filters which (comma separated) properties are included in the response. Defaults to ‘systemdata,metadata,content’ (no renditions).",
+            "schema": {
+              "type": "string",
+              "example": "systemdata,metadata,content,references"
+            },
+            "in": "query"
+          },
           {
             "name": "limit",
             "description": "A limit for how much published documents to retrieve. Defaults to 100. Max. 100.",
+            "schema": {
+              "type": "integer",
+              "minLength": 0,
+              "maxLength": 100,
+              "example": 100
+            },
+            "in": "query"
+          },
+          {
+            "name": "offset",
+            "description": "An offset into the query. Useful when getting more than 100 results (pagination)",
             "schema": {
               "type": "integer"
             },
             "in": "query"
           },
           {
-            "name": "renditions",
-            "description": "A comma-separated list of rendition handles. Example: ?renditions=web,json",
+            "name": "reverse",
+            "description": "Order publications in ascending order instead of the default descending order. This is useful if you want to paginate using a time based filter.",
+            "schema": {
+              "type": "boolean"
+            },
+            "in": "query"
+          },
+          {
+            "name": "homepage",
+            "description": "Return only the document labeled as homepage in the current project.",
+            "schema": {
+              "type": "boolean"
+            },
+            "in": "query"
+          },
+          {
+            "name": "contentTypes",
+            "description": "Comma separated list of content types to use as filter.",
+            "schema": {
+              "type": "string",
+              "example": "regular"
+            },
+            "in": "query"
+          },
+          {
+            "name": "documentTypes",
+            "description": "Comma separated list of document types to use as filter.\nCan be one of 'article', 'page', 'data-record'.",
+            "schema": {
+              "type": "string",
+              "example": "article,page,data-record"
+            },
+            "in": "query"
+          },
+          {
+            "name": "id.gte",
+            "description": "Filter by document id range.\n\nSupported filters: 'id.gte', 'id.gt', 'id.lte', 'id.lt'.\n\nThe id range filter is useful if you want to export a lot of documents. You can do many requests in parallel against the api, where you filter by the specific ranges.\n\nThis query is much more flexible than an offset-based filter and works with millions of documents.\n\nRequest 1: ?id.gt=0&id.lte=100\nRequest 2: ?id.gt=100&id.lte=200\nRequest 3: ?id.gt=200&id.lte=300",
             "schema": {
               "type": "string"
+            },
+            "in": "query"
+          },
+          {
+            "name": "id.gt",
+            "schema": {
+              "type": "string"
+            },
+            "in": "query"
+          },
+          {
+            "name": "id.lte",
+            "schema": {
+              "type": "string"
+            },
+            "in": "query"
+          },
+          {
+            "name": "id.lt",
+            "schema": {
+              "type": "string"
+            },
+            "in": "query"
+          },
+          {
+            "name": "publishedAt.gte",
+            "description": "Filter by publish date range.\nSupported filters: 'publishedAt.gte', 'publishedAt.gt', 'publishedAt.lte', 'publishedAt.lt'.\n\nExample: To retrieve all publications since a specific timestamp, use '?reverse&publishedAt.gte=2021-05-01T00:00:00.000Z'",
+            "schema": {
+              "type": "string",
+              "format": "date-time",
+              "example": "2021-01-30T08:30:00Z"
+            },
+            "in": "query"
+          },
+          {
+            "name": "publishedAt.gt",
+            "schema": {
+              "type": "string",
+              "format": "date-time",
+              "example": "2021-01-30T08:30:00Z"
+            },
+            "in": "query"
+          },
+          {
+            "name": "publishedAt.lte",
+            "schema": {
+              "type": "string",
+              "format": "date-time",
+              "example": "2021-01-30T08:30:00Z"
+            },
+            "in": "query"
+          },
+          {
+            "name": "publishedAt.lt",
+            "schema": {
+              "type": "string",
+              "format": "date-time",
+              "example": "2021-01-30T08:30:00Z"
             },
             "in": "query"
           }
@@ -353,6 +476,40 @@
             "description": "A comma-separated list of rendition handles. Example: ?renditions=web,json",
             "schema": {
               "type": "string"
+    "/api/beta/documents/{documentId}/latestPublication": {
+      "get": {
+        "security": [
+          {"bearerAuth": ["public-api:read"]}
+        ],
+        "tags": [
+          "Publications"
+        ],
+        "summary": "Latest Publication Beta",
+        "description": "The response is a JSON object with 5 possible top-level properties: systemdata, metadata, content, renditions, references",
+        "parameters": [
+          {
+            "name": "documentId",
+            "schema": {
+              "type": "integer"
+            },
+            "in": "path",
+            "required": true
+          },
+          {
+            "name": "fields",
+            "description": "Filters which (comma separated) properties are included in the response.",
+            "schema": {
+              "type": "string",
+              "example": "systemdata,metadata,content,renditions,references,"
+            },
+            "in": "query"
+          },
+          {
+            "name": "renditions",
+            "description": "A comma-separated list of rendition handles. Example: ?renditions=web,json",
+            "schema": {
+              "type": "string",
+              "example": "web,json"
             },
             "in": "query"
           }
