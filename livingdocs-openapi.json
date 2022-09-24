@@ -745,19 +745,19 @@
         "requestBody": {
            "content": {
               "application/json": {
-                "example": {
-                  "fields": ["systemdata", "metadata", "content", "html", "includes", "design"],
-                  "metadata": {
-                    "preload": {"myMetadataProp": true}
-                  },
-                  "resolveIncludes": true,
-                  "renderOptions": {
-                    "renderDirectiveInfo": true,
-                    "decodeHtml": true
-                  }
-                },
                 "schema": {
                   "type": "object",
+                  "example": {
+                    "fields": ["systemdata", "metadata", "content", "html", "includes", "design"],
+                    "metadata": {
+                      "preload": {"myMetadataProp": true}
+                    },
+                    "resolveIncludes": true,
+                    "renderOptions": {
+                      "renderDirectiveInfo": true,
+                      "decodeHtml": true
+                    }
+                  },
                   "properties": {
                     "fields": {
                       "type": "array",
