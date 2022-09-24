@@ -114,17 +114,9 @@
   "paths": {
     "/api/v1/project": {
       "get": {
-        "security": [
-          {
-            "bearerAuth": [
-              "public-api:read"
-            ]
-          }
-        ],
-        "tags": [
-          "Project"
-        ],
-        "summary": "details and configuration of this project.",
+        "security": [{"bearerAuth": ["public-api:read"]}],
+        "tags": ["Project"],
+        "summary": "Get Project Configuration",
         "description": "Your AccessToken is valid for a single project. This endpoint tells you the details and configuration of this project.",
         "responses": {
           "200": {
@@ -135,17 +127,9 @@
     },
     "/api/v1/channels": {
       "get": {
-        "security": [
-          {
-            "bearerAuth": [
-              "public-api:read"
-            ]
-          }
-        ],
-        "tags": [
-          "Project"
-        ],
-        "summary": "details and configuration of this project.",
+        "security": [{"bearerAuth": ["public-api:read"]}],
+        "tags": ["Project"],
+        "summary": "Get Default Channel Configuration",
         "responses": {
           "200": {
             "description": "ok"
@@ -155,29 +139,19 @@
     },
     "/api/v1/channels/{channelHandle}": {
       "get": {
-        "security": [
-          {
-            "bearerAuth": [
-              "public-api:read"
-            ]
-          }
-        ],
+        "security": [{"bearerAuth": ["public-api:read"]}],
+        "tags": ["Project"],
+        "summary": "Get Channel Configuration",
         "parameters": [
           {
             "name": "channelHandle",
             "in": "path",
-            "description": "Optional channelHandle. Will return first channel of a project if none is passed.",
             "required": true,
             "schema": {
-              "type": "string",
-              "example": ""
+              "type": "string"
             }
           }
         ],
-        "tags": [
-          "Project"
-        ],
-        "summary": "details and configuration of this project.",
         "responses": {
           "200": {
             "description": "ok"
@@ -187,17 +161,9 @@
     },
     "/api/v1/design": {
       "get": {
-        "security": [
-          {
-            "bearerAuth": [
-              "public-api:read"
-            ]
-          }
-        ],
-        "tags": [
-          "Project"
-        ],
-        "summary": "details and configuration of this project.",
+        "security": [{"bearerAuth": ["public-api:read"]}],
+        "tags": ["Project"],
+        "summary": "Get Current Design",
         "responses": {
           "200": {
             "description": "ok"
@@ -207,18 +173,13 @@
     },
     "/api/v1/design/{designVersion}": {
       "get": {
-        "security": [
-          {
-            "bearerAuth": [
-              "public-api:read"
-            ]
-          }
-        ],
+        "security": [{"bearerAuth": ["public-api:read"]}],
+        "tags": ["Project"],
+        "summary": "Get Specific Design",
         "parameters": [
           {
             "name": "designVersion",
             "in": "path",
-            "description": "Optional design version. Will take the current design version of a channel if none is passed.",
             "required": true,
             "schema": {
               "type": "string",
@@ -226,10 +187,6 @@
             }
           }
         ],
-        "tags": [
-          "Project"
-        ],
-        "summary": "design versions of this project.",
         "responses": {
           "200": {
             "description": "ok"
@@ -239,11 +196,9 @@
     },
     "/api/v1/documents/{documentId}/addDeliveryStatus": {
       "post": {
-        "tags": [
-          "Add Delivery Status"
-        ],
-        "summary": "details and configuration of this project.",
-        "description": "",
+        "tags": ["Add Delivery Status"],
+        "summary": "Add Delivery Status",
+        "description": "not complete yet",
         "parameters": [
           {
             "name": "documentId",
@@ -264,16 +219,8 @@
     },
     "/api/v1/documents/latestPublications": {
       "get": {
-        "security": [
-          {
-            "bearerAuth": [
-              "public-api:read"
-            ]
-          }
-        ],
-        "tags": [
-          "Publications"
-        ],
+        "security": [{"bearerAuth": ["public-api:read"]}],
+        "tags": ["Publications"],
         "summary": "Latest Publications",
         "description": "This endpoint is the list equivalent of the previous one. The response is an array of objects with 3 possible top-level properties: systemdata, metadata, content",
         "parameters": [
@@ -415,12 +362,8 @@
     },
     "/api/beta/documents/latestPublications": {
       "get": {
-        "security": [
-          {"bearerAuth": ["public-api:read"]}
-        ],
-        "tags": [
-          "Publications"
-        ],
+        "security": [{"bearerAuth": ["public-api:read"]}],
+        "tags": ["Publications"],
         "summary": "Latest Publications Beta",
         "description": "This endpoint is the list equivalent of the previous one. The response is an array of objects with 4 possible top-level properties: systemdata, metadata, content, references",
         "parameters": [
@@ -562,16 +505,8 @@
     },
     "/api/v1/documents/{documentId}/latestPublication": {
       "get": {
-        "security": [
-          {
-            "bearerAuth": [
-              "public-api:read"
-            ]
-          }
-        ],
-        "tags": [
-          "Publications"
-        ],
+        "security": [{"bearerAuth": ["public-api:read"]}],
+        "tags": ["Publications"],
         "summary": "Latest Publication",
         "description": "Required scope: public-api:read. The response is a JSON object with 4 possible top-level properties: systemdata, metadata, content, renditions",
         "parameters": [
@@ -611,12 +546,8 @@
     },
     "/api/beta/documents/{documentId}/latestPublication": {
       "get": {
-        "security": [
-          {"bearerAuth": ["public-api:read"]}
-        ],
-        "tags": [
-          "Publications"
-        ],
+        "security": [{"bearerAuth": ["public-api:read"]}],
+        "tags": ["Publications"],
         "summary": "Latest Publication Beta",
         "description": "The response is a JSON object with 5 possible top-level properties: systemdata, metadata, content, renditions, references",
         "parameters": [
@@ -656,9 +587,7 @@
     },
     "/api/v1/sitemaps/index": {
       "get": {
-        "tags": [
-          "Sitemaps"
-        ],
+        "tags": ["Sitemaps"],
         "summary": "Get a Sitemap Index",
         "description": "",
         "parameters": [
@@ -706,9 +635,7 @@
     },
     "/api/v1/health": {
       "get": {
-        "tags": [
-          "Health"
-        ],
+        "tags": ["Health"],
         "summary": "Check API Status",
         "description": "",
         "responses": {
@@ -720,16 +647,8 @@
     },
     "/api/beta/composition/{documentId}": {
       "post": {
-        "security": [
-          {
-            "bearerAuth": [
-              "public-api:read"
-            ]
-          }
-        ],
-        "tags": [
-          "Composition API"
-        ],
+        "security": [{"bearerAuth": ["public-api:read"]}],
+        "tags": ["Composition API"],
         "summary": "Compose a publication",
         "description": "The goal of the composition endpoint is to gather all required information to render a document in one endpoint and to work for different rendering strategies (e.g. render from JSON or use the prerendered Html). The composition Api supports rendering Html without any configuration, can preload references in metadata and can return resolved includes as JSON. It offers optimised performance for all those tasks and will replace the RenderPipeline feature. We plan to add additional functionalities like automatic design updates of documents and more to the composition Api in upcoming releases and are open for inputs what we could add.",
         "parameters": [
