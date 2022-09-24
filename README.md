@@ -38,7 +38,7 @@ Keep the same structure as our documentation [docs](https://docs.livingdocs.io/r
 Many API endpoints are still missing. Please mark the category as completed when all its endpoints are registered in the spec.
 - Project ✅
 - Composition API ✅
-- Publications (WIP 🚧)
+- Publications (WIP)
 - Search
 - Document Lists
 - Document Categories
