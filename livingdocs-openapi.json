@@ -114,8 +114,16 @@
   "paths": {
     "/api/v1/project": {
       "get": {
-        "security": [{"bearerAuth": ["public-api:read"]}],
-        "tags": ["Project"],
+        "security": [
+          {
+            "bearerAuth": [
+              "public-api:read"
+            ]
+          }
+        ],
+        "tags": [
+          "Project"
+        ],
         "summary": "Get Project Configuration",
         "description": "Your AccessToken is valid for a single project. This endpoint tells you the details and configuration of this project.",
         "responses": {
@@ -127,8 +135,16 @@
     },
     "/api/v1/channels": {
       "get": {
-        "security": [{"bearerAuth": ["public-api:read"]}],
-        "tags": ["Project"],
+        "security": [
+          {
+            "bearerAuth": [
+              "public-api:read"
+            ]
+          }
+        ],
+        "tags": [
+          "Project"
+        ],
         "summary": "Get Default Channel Configuration",
         "responses": {
           "200": {
@@ -139,8 +155,16 @@
     },
     "/api/v1/channels/{channelHandle}": {
       "get": {
-        "security": [{"bearerAuth": ["public-api:read"]}],
-        "tags": ["Project"],
+        "security": [
+          {
+            "bearerAuth": [
+              "public-api:read"
+            ]
+          }
+        ],
+        "tags": [
+          "Project"
+        ],
         "summary": "Get Channel Configuration",
         "parameters": [
           {
@@ -161,8 +185,16 @@
     },
     "/api/v1/design": {
       "get": {
-        "security": [{"bearerAuth": ["public-api:read"]}],
-        "tags": ["Project"],
+        "security": [
+          {
+            "bearerAuth": [
+              "public-api:read"
+            ]
+          }
+        ],
+        "tags": [
+          "Project"
+        ],
         "summary": "Get Current Design",
         "responses": {
           "200": {
@@ -173,8 +205,16 @@
     },
     "/api/v1/design/{designVersion}": {
       "get": {
-        "security": [{"bearerAuth": ["public-api:read"]}],
-        "tags": ["Project"],
+        "security": [
+          {
+            "bearerAuth": [
+              "public-api:read"
+            ]
+          }
+        ],
+        "tags": [
+          "Project"
+        ],
         "summary": "Get Specific Design",
         "parameters": [
           {
@@ -194,9 +234,106 @@
         }
       }
     },
+    "/api/v1/publications/search": {
+      "get": {
+        "security": [
+          {
+            "bearerAuth": [
+              "public-api:read"
+            ]
+          }
+        ],
+        "tags": [
+          "Search"
+        ],
+        "summary": "Search Publications",
+        "parameters": [
+          {
+            "name": "search",
+            "description": "Search term to perform a full-text search with. For exact word matches use “, e.g. ‘search=“Ukulele”’",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "example": ""
+            }
+          },
+          {
+            "name": "categories",
+            "description": "Comma separated list of category ids for which documents should be found. Categories are concatenated with OR. Example: ‘sport,fashion’",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "example": ""
+            }
+          },
+          {
+            "name": "languages",
+            "description": "Comma separated list of languages for which documents should be found. Languages are concatenated with OR. Example: ‘en,de’",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "example": ""
+            }
+          },
+          {
+            "name": "languageGroupId",
+            "description": "A GroupId used to fetch all translations of a document Using the ?languages param a document in a specific language can be fetched. Example: ‘?languageGroupId=47?language=de’",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "example": ""
+            }
+          },
+          {
+            "name": "contentTypes",
+            "description": "Comma separated list of content-types for which documents should be found. Content types are concatenated with OR. Example: ‘article,author’",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "example": ""
+            }
+          },
+          {
+            "name": "fields",
+            "description": "Filters which (comma separated) properties are included in the response. Defaults to ‘systemdata,metadata,content’ (no renditions). Use ‘id’ if you only want to retrieve the ids of the published documents. Useful (and faster) if you are fully synchronizing your frontend with the publication events.",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "example": ""
+            }
+          },
+          {
+            "name": "limit",
+            "description": "A limit for how much published documents to retrieve. Defaults to 10. Max. 100.",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "minLength": 0,
+              "maxLength": 100,
+              "example": 10
+            }
+          },
+          {
+            "name": "offset",
+            "description": "An offset into the query. Useful when getting more than 100 results (pagination)",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "ok"
+          }
+        }
+      }
+    },
     "/api/v1/documents/{documentId}/addDeliveryStatus": {
       "post": {
-        "tags": ["Add Delivery Status"],
+        "tags": [
+          "Add Delivery Status"
+        ],
         "summary": "Add Delivery Status",
         "description": "not complete yet",
         "parameters": [
@@ -219,8 +356,16 @@
     },
     "/api/v1/documents/latestPublications": {
       "get": {
-        "security": [{"bearerAuth": ["public-api:read"]}],
-        "tags": ["Publications"],
+        "security": [
+          {
+            "bearerAuth": [
+              "public-api:read"
+            ]
+          }
+        ],
+        "tags": [
+          "Publications"
+        ],
         "summary": "Latest Publications",
         "description": "This endpoint is the list equivalent of the previous one. The response is an array of objects with 3 possible top-level properties: systemdata, metadata, content",
         "parameters": [
@@ -362,8 +507,16 @@
     },
     "/api/beta/documents/latestPublications": {
       "get": {
-        "security": [{"bearerAuth": ["public-api:read"]}],
-        "tags": ["Publications"],
+        "security": [
+          {
+            "bearerAuth": [
+              "public-api:read"
+            ]
+          }
+        ],
+        "tags": [
+          "Publications"
+        ],
         "summary": "Latest Publications Beta",
         "description": "This endpoint is the list equivalent of the previous one. The response is an array of objects with 4 possible top-level properties: systemdata, metadata, content, references",
         "parameters": [
@@ -505,8 +658,16 @@
     },
     "/api/v1/documents/{documentId}/latestPublication": {
       "get": {
-        "security": [{"bearerAuth": ["public-api:read"]}],
-        "tags": ["Publications"],
+        "security": [
+          {
+            "bearerAuth": [
+              "public-api:read"
+            ]
+          }
+        ],
+        "tags": [
+          "Publications"
+        ],
         "summary": "Latest Publication",
         "description": "Required scope: public-api:read. The response is a JSON object with 4 possible top-level properties: systemdata, metadata, content, renditions",
         "parameters": [
@@ -546,8 +707,16 @@
     },
     "/api/beta/documents/{documentId}/latestPublication": {
       "get": {
-        "security": [{"bearerAuth": ["public-api:read"]}],
-        "tags": ["Publications"],
+        "security": [
+          {
+            "bearerAuth": [
+              "public-api:read"
+            ]
+          }
+        ],
+        "tags": [
+          "Publications"
+        ],
         "summary": "Latest Publication Beta",
         "description": "The response is a JSON object with 5 possible top-level properties: systemdata, metadata, content, renditions, references",
         "parameters": [
@@ -587,7 +756,9 @@
     },
     "/api/v1/sitemaps/index": {
       "get": {
-        "tags": ["Sitemaps"],
+        "tags": [
+          "Sitemaps"
+        ],
         "summary": "Get a Sitemap Index",
         "description": "",
         "parameters": [
@@ -635,7 +806,9 @@
     },
     "/api/v1/health": {
       "get": {
-        "tags": ["Health"],
+        "tags": [
+          "Health"
+        ],
         "summary": "Check API Status",
         "description": "",
         "responses": {
@@ -647,8 +820,16 @@
     },
     "/api/beta/composition/{documentId}": {
       "post": {
-        "security": [{"bearerAuth": ["public-api:read"]}],
-        "tags": ["Composition API"],
+        "security": [
+          {
+            "bearerAuth": [
+              "public-api:read"
+            ]
+          }
+        ],
+        "tags": [
+          "Composition API"
+        ],
         "summary": "Compose a publication",
         "description": "The goal of the composition endpoint is to gather all required information to render a document in one endpoint and to work for different rendering strategies (e.g. render from JSON or use the prerendered Html). The composition Api supports rendering Html without any configuration, can preload references in metadata and can return resolved includes as JSON. It offers optimised performance for all those tasks and will replace the RenderPipeline feature. We plan to add additional functionalities like automatic design updates of documents and more to the composition Api in upcoming releases and are open for inputs what we could add.",
         "parameters": [
@@ -662,57 +843,73 @@
           }
         ],
         "requestBody": {
-           "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "example": {
-                    "fields": ["systemdata", "metadata", "content", "html", "includes", "design"],
-                    "metadata": {
-                      "preload": {"myMetadataProp": true}
-                    },
-                    "resolveIncludes": true,
-                    "renderOptions": {
-                      "renderDirectiveInfo": true,
-                      "decodeHtml": true
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "example": {
+                  "fields": [
+                    "systemdata",
+                    "metadata",
+                    "content",
+                    "html",
+                    "includes",
+                    "design"
+                  ],
+                  "metadata": {
+                    "preload": {
+                      "myMetadataProp": true
                     }
                   },
-                  "properties": {
-                    "fields": {
-                      "type": "array",
-                      "items": {
-                        "type": "string",
-                        "enum": ["systemdata", "metadata", "content", "html", "includes", "design"]
+                  "resolveIncludes": true,
+                  "renderOptions": {
+                    "renderDirectiveInfo": true,
+                    "decodeHtml": true
+                  }
+                },
+                "properties": {
+                  "fields": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "enum": [
+                        "systemdata",
+                        "metadata",
+                        "content",
+                        "html",
+                        "includes",
+                        "design"
+                      ]
+                    }
+                  },
+                  "metadata": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "preload": {
+                        "type": "object"
                       }
-                    },
-                    "metadata": {
-                      "type": "object",
-                      "additionalProperties": false,
-                      "properties": {
-                        "preload": {
-                          "type": "object"
-                        }
-                      }
-                    },
-                    "resolveIncludes": {
-                      "type": "boolean"
-                    },
-                    "renderOptions": {
-                      "type": "object",
-                      "additionalProperties": false,
-                      "properties": {
-                        "renderDirectiveInfo": {
-                          "type": "boolean"
-                        },
-                        "decodeHtml": {
-                          "type": "boolean"
-                        }
+                    }
+                  },
+                  "resolveIncludes": {
+                    "type": "boolean"
+                  },
+                  "renderOptions": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "renderDirectiveInfo": {
+                        "type": "boolean"
+                      },
+                      "decodeHtml": {
+                        "type": "boolean"
                       }
                     }
                   }
                 }
               }
             }
+          }
         },
         "responses": {
           "200": {

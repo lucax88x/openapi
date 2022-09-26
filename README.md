@@ -11,6 +11,8 @@ This file makes it easy to test and share our API enpoints.
 Import the livingdocs-openapi.json file into insomnia as a design document, here you can test the APIs and add new endpoints.
 For authenticated requests you need an API token from your Livingdocs project.
 
+Alternatively you can do everything in VS Code using the [OpenAPI (Swagger) Extension](https://marketplace.visualstudio.com/items?itemName=42Crunch.vscode-openapi).
+
 ### Example endpoint
 ```yaml
   /channels/{channelHandle}:
@@ -36,17 +38,17 @@ For authenticated requests you need an API token from your Livingdocs project.
 ## How to contribute
 Keep the same structure as our documentation [docs](https://docs.livingdocs.io/reference-docs/public-api/)
 Many API endpoints are still missing. Please mark the category as completed when all its endpoints are registered in the spec.
-- Project ✅
-- Composition API ✅
+- Project             ✅
+- Composition API     ✅
 - Publications (WIP)
-- Search
+- Search              ✅
 - Document Lists
 - Document Categories
 - Routing
 - Media Library
 - Imports
 - Sitemaps
-- Health ✅
+- Health              ✅
 - Add Delivery Status
 
 
