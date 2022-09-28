@@ -42,7 +42,7 @@ Many API endpoints are still missing. Please mark the category as completed when
 - Composition API     ✅
 - Publications (WIP)
 - Search              ✅
-- Document Lists
+- Document Lists      ✅
 - Document Categories
 - Routing
 - Media Library
