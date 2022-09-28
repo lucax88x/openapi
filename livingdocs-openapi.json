@@ -250,7 +250,7 @@
         "parameters": [
           {
             "name": "search",
-            "description": "Search term to perform a full-text search with. For exact word matches use “, e.g. ‘search=“Ukulele”’",
+            "description": "Search term to perform a full-text search with. For exact word matches use “, e.g. `search=“Ukulele”`",
             "in": "query",
             "schema": {
               "type": "string",
@@ -259,7 +259,7 @@
           },
           {
             "name": "categories",
-            "description": "Comma separated list of category ids for which documents should be found. Categories are concatenated with OR. Example: ‘sport,fashion’",
+            "description": "Comma separated list of category ids for which documents should be found. Categories are concatenated with OR. Example: `sport,fashion`",
             "in": "query",
             "schema": {
               "type": "string",
@@ -268,7 +268,7 @@
           },
           {
             "name": "languages",
-            "description": "Comma separated list of languages for which documents should be found. Languages are concatenated with OR. Example: ‘en,de’",
+            "description": "Comma separated list of languages for which documents should be found. Languages are concatenated with OR. Example: `en,de`",
             "in": "query",
             "schema": {
               "type": "string",
@@ -277,7 +277,7 @@
           },
           {
             "name": "languageGroupId",
-            "description": "A GroupId used to fetch all translations of a document Using the ?languages param a document in a specific language can be fetched. Example: ‘?languageGroupId=47?language=de’",
+            "description": "A GroupId used to fetch all translations of a document Using the ?languages param a document in a specific language can be fetched. Example: `?languageGroupId=47?language=de`",
             "in": "query",
             "schema": {
               "type": "string",
@@ -286,7 +286,7 @@
           },
           {
             "name": "contentTypes",
-            "description": "Comma separated list of content-types for which documents should be found. Content types are concatenated with OR. Example: ‘article,author’",
+            "description": "Comma separated list of content-types for which documents should be found. Content types are concatenated with OR. Example: `article,author`",
             "in": "query",
             "schema": {
               "type": "string",
@@ -295,7 +295,7 @@
           },
           {
             "name": "fields",
-            "description": "Filters which (comma separated) properties are included in the response. Defaults to ‘systemdata,metadata,content’ (no renditions). Use ‘id’ if you only want to retrieve the ids of the published documents. Useful (and faster) if you are fully synchronizing your frontend with the publication events.",
+            "description": "Filters which (comma separated) properties are included in the response. Defaults to `systemdata,metadata,content` (no renditions). Use `id` if you only want to retrieve the ids of the published documents. Useful (and faster) if you are fully synchronizing your frontend with the publication events.",
             "in": "query",
             "schema": {
               "type": "string",
@@ -355,7 +355,7 @@
           },
           {
             "name": "reverse",
-            "description": "Pass ‘reverse=false’ to get the list in the same order as you see it in the editor. (the default is reverse=true for backwards compatibility reasons)",
+            "description": "Pass `reverse=false` to get the list in the same order as you see it in the editor. (the default is reverse=true for backwards compatibility reasons)",
             "in": "query",
             "schema": {
               "type": "boolean",
@@ -364,7 +364,7 @@
           },
           {
             "name": "fields",
-            "description": "Filters which (comma separated) document properties are included in the response. Defaults to ‘systemdata,metadata’ also accepts ‘content’ (no renditions).",
+            "description": "Filters which (comma separated) document properties are included in the response. Defaults to `systemdata,metadata` also accepts `content` (no renditions).",
             "in": "query",
             "schema": {
               "type": "string",
@@ -466,7 +466,7 @@
           },
           {
             "name": "inheritMetadata",
-            "description": "If set to “true” will inherit (but not overwrite) metadata properties from all parents Inheritance depth is limited to 20.",
+            "description": "If set to `true` will inherit (but not overwrite) metadata properties from all parents Inheritance depth is limited to 20.",
             "in": "query",
             "schema": {
               "type": "boolean",
@@ -504,22 +504,80 @@
     },
     "/api/v1/documents/{documentId}/addDeliveryStatus": {
       "post": {
+        "security": [
+          {
+            "bearerAuth": [
+              "public-api:write"
+            ]
+          }
+        ],
         "tags": [
           "Add Delivery Status"
         ],
         "summary": "Add Delivery Status",
-        "description": "not complete yet",
+        "description": "This endpoint allows to provide updates for a document/publication regarding its status in an external delivery system (e.g. page build status in a static site generator). The response is a JSON object including the `reportId`.",
         "parameters": [
           {
             "name": "documentId",
             "in": "path",
-            "description": "Status values that need to be considered for filter",
+            "description": "Id of the document",
             "required": true,
             "schema": {
               "type": "integer"
             }
           }
         ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "example": {
+                  "reportId": "2SG2MAA9RwPn",
+                  "projectId": 1,
+                  "documentId": 1,
+                  "publicationId": 524,
+                  "deliveryHandle": "web",
+                  "status": "success",
+                  "message": "Message with <strong>html</strong>"
+                },
+                "properties": {
+                  "reportId": {
+                    "type": "string",
+                    "description": "If provided this will update the record, otherwise it will create a new one with a new reportId"
+                  },
+                  "projectId": {
+                    "type": "string"
+                  },
+                  "documentId": {
+                    "type": "string"
+                  },
+                  "publicationId": {
+                    "type": "string",
+                    "description": "required"
+                  },
+                  "deliveryHandle": {
+                    "type": "string",
+                    "description": "required"
+                  },
+                  "status": {
+                    "type": "string",
+                    "description": "required. One of: “success”, “failed”, “in-progress”",
+                    "required": [
+                      "success",
+                      "failed",
+                      "in-progress"
+                    ]
+                  },
+                  "message": {
+                    "type": "string",
+                    "description": "String or sanitized HTML"
+                  }
+                }
+              }
+            }
+          }
+        },
         "responses": {
           "200": {
             "description": "successful operation"
@@ -544,7 +602,7 @@
         "parameters": [
           {
             "name": "fields",
-            "description": "Filters which (comma separated) properties are included in the response. Defaults to ‘systemdata,metadata,content’ (no renditions).",
+            "description": "Filters which (comma separated) properties are included in the response. Defaults to `systemdata,metadata,content` (no renditions).",
             "schema": {
               "type": "string",
               "example": "systemdata,metadata,content"
@@ -695,7 +753,7 @@
         "parameters": [
           {
             "name": "fields",
-            "description": "Filters which (comma separated) properties are included in the response. Defaults to ‘systemdata,metadata,content’ (no renditions).",
+            "description": "Filters which (comma separated) properties are included in the response. Defaults to `systemdata,metadata,content` (no renditions).",
             "schema": {
               "type": "string",
               "example": "systemdata,metadata,content,references"

@@ -49,7 +49,7 @@ Many API endpoints are still missing. Please mark the category as completed when
 - Imports
 - Sitemaps
 - Health              ✅
-- Add Delivery Status
+- Add Delivery Status ✅
 
 
 ## TODOs and future ideas
