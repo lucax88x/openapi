@@ -440,6 +440,68 @@
         }
       }
     },
+    "/api/v1/categories/{categoryId}": {
+      "get": {
+        "security": [
+          {
+            "bearerAuth": [
+              "public-api:read"
+            ]
+          }
+        ],
+        "tags": [
+          "Document Categories"
+        ],
+        "summary": "Get a Category with all Information",
+        "description": "You need to activate the Categories / Routing Feature in the Project Config in order to query categories.",
+        "parameters": [
+          {
+            "name": "categoryId",
+            "description": "Id of a specific categories as fetched from the /categories endpoint.",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "inheritMetadata",
+            "description": "If set to “true” will inherit (but not overwrite) metadata properties from all parents Inheritance depth is limited to 20.",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "example": "false"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "ok"
+          }
+        }
+      }
+    },
+    "/api/v1/categories": {
+      "get": {
+        "security": [
+          {
+            "bearerAuth": [
+              "public-api:read"
+            ]
+          }
+        ],
+        "tags": [
+          "Document Categories"
+        ],
+        "summary": "Get Categories for a Project",
+        "description": "You need to activate the Categories / Routing Feature in the Project Config in order to query categories.",
+        "responses": {
+          "200": {
+            "description": "ok"
+          }
+        }
+      }
+    },
     "/api/v1/documents/{documentId}/addDeliveryStatus": {
       "post": {
         "tags": [

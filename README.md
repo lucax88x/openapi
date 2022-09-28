@@ -43,7 +43,7 @@ Many API endpoints are still missing. Please mark the category as completed when
 - Publications (WIP)
 - Search              ✅
 - Document Lists      ✅
-- Document Categories
+- Document Categories ✅
 - Routing
 - Media Library
 - Imports
