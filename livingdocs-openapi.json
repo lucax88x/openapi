@@ -359,7 +359,7 @@
             "in": "query",
             "schema": {
               "type": "boolean",
-              "example": "true"
+              "example": "false"
             }
           },
           {
@@ -368,7 +368,7 @@
             "in": "query",
             "schema": {
               "type": "string",
-              "example": "systemdata,metadata"
+              "example": "systemdata,metadata,content"
             }
           },
           {
@@ -541,6 +541,11 @@
                   "status": "success",
                   "message": "Message with <strong>html</strong>"
                 },
+                "required": [
+                  "publicationId",
+                  "deliveryHandle",
+                  "status"
+                ],
                 "properties": {
                   "reportId": {
                     "type": "string",
@@ -553,17 +558,15 @@
                     "type": "string"
                   },
                   "publicationId": {
-                    "type": "string",
-                    "description": "required"
+                    "type": "string"
                   },
                   "deliveryHandle": {
-                    "type": "string",
-                    "description": "required"
+                    "type": "string"
                   },
                   "status": {
                     "type": "string",
-                    "description": "required. One of: “success”, “failed”, “in-progress”",
-                    "required": [
+                    "description": "One of: “success”, “failed”, “in-progress”",
+                    "enum": [
                       "success",
                       "failed",
                       "in-progress"
