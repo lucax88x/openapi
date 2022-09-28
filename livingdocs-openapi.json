@@ -263,7 +263,7 @@
             "in": "query",
             "schema": {
               "type": "string",
-              "example": ""
+              "example": "sport,fashion"
             }
           },
           {
@@ -272,7 +272,7 @@
             "in": "query",
             "schema": {
               "type": "string",
-              "example": ""
+              "example": "en,de"
             }
           },
           {
@@ -290,7 +290,7 @@
             "in": "query",
             "schema": {
               "type": "string",
-              "example": ""
+              "example": "regular,author"
             }
           },
           {
@@ -299,7 +299,7 @@
             "in": "query",
             "schema": {
               "type": "string",
-              "example": ""
+              "example": "systemdata,metadata,content"
             }
           },
           {
@@ -318,7 +318,8 @@
             "description": "An offset into the query. Useful when getting more than 100 results (pagination)",
             "in": "query",
             "schema": {
-              "type": "integer"
+              "type": "integer",
+              "example": 0
             }
           }
         ],
