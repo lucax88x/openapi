@@ -1,7 +1,9 @@
 # OpenAPI Spec
-OpenAPI (Swagger) spec for Livingdocs Public API
+OpenAPI 3 specficication for Livingdocs Public API
 
 This file makes it easy to test and share our API enpoints.
+
+It's available [here](/livingdocs-openapi.json)
 
 ## Supported environments
 - service (edit.livingdocs.io)
@@ -10,9 +12,9 @@ This file makes it easy to test and share our API enpoints.
 ## How to use it
 The OpenAPI spec is hosted by Github pages at: 
 
-https://livingdocsio.github.io/openapi/livingdocs-openapi.json 
+[https://livingdocsio.github.io/openapi/livingdocs-openapi.json](https://livingdocsio.github.io/openapi/livingdocs-openapi.json)
 
-This can be imported in Insomnia or Postman to have a full suite of API enpoints to test.
+This can be imported in Insomnia or Postman to have a full collections of API enpoints to test.
 
 TODO add insomnia screenshot
 
@@ -21,8 +23,6 @@ Alternatively the same can be done with online tools. You just need to paste the
 [Swagger UI](https://petstore.swagger.io/)
 
 [Swagger Editor](https://editor.swagger.io/)
-
-[RapidDocWeb](https://rapidocweb.com/examples/example1.html)
 
 
 ### Some other tools
@@ -81,8 +81,8 @@ Many API endpoints are still missing. Please mark the category as completed when
 
 
 ## TODOs and future ideas
-- add all the api endpoints from our docs ✅
-- share the OpenAPI spec file on edit.livingdocs/api/openapi.json
+- add all the Public API endpoints from our docs ✅
+- make available the OAS publicly ✅
 - embedd the Swagger UI in our docs
 - support to extend downstream with downstream declaration
 - generate the spec by the server
