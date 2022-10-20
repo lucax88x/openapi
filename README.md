@@ -16,7 +16,8 @@ The OpenAPI spec is hosted by Github pages at:
 
 This can be imported in Insomnia or Postman to have a full collections of API enpoints to test.
 
-TODO add insomnia screenshot
+<img width="1512" alt="openapi-insomnia" src="https://user-images.githubusercontent.com/1682803/196886910-760a2ddd-9b46-42c3-9292-71968d80fbaf.png">
+
 
 Alternatively the same can be done with online tools. You just need to paste the OpenAPI spec url in one of the following tools.
 
