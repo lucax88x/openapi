@@ -3491,8 +3491,20 @@
       "description": "localhost"
     },
     {
-      "url": "https://develop.livingdocs.io/proxy/api",
-      "description": "develop"
+      "url": "{protocol}://{hostname}",
+      "description": "downstream",
+      "variables": {
+        "protocol": {
+          "enum": [
+            "http",
+            "https"
+          ],
+          "default": "https"
+        },
+        "hostname": {
+          "default": "downstream.dev/proxy/api"
+        }
+      }
     }
   ],
   "components": {
