@@ -2,8 +2,8 @@
   "openapi": "3.0.3",
   "info": {
     "description": "This is to quickly test the Livingdocs Public API. First create a project on [Livingdocs](edit.livingdocs.io). Then create a API token for that project. Use the token to authorize your requests. You can find out more about Livingdocs [http://livingdocs.io](http://livingdocs.io). ",
-    "version": "1.0.0",
-    "title": "Livingdocs Service",
+    "version": "release-2022-11",
+    "title": "Livingdocs Demo",
     "termsOfService": "http://livingdocs.io/terms/",
     "contact": {
       "email": "team@livingdocs.io"
@@ -3484,7 +3484,7 @@
   "servers": [
     {
       "url": "https://server.livingdocs.io",
-      "description": "service"
+      "description": "demo"
     },
     {
       "url": "https://localhost:9000/proxy/api",
