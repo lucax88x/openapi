@@ -3502,7 +3502,7 @@
           "default": "https"
         },
         "hostname": {
-          "default": "downstream.dev/proxy/api"
+          "default": "example.com"
         }
       }
     }
