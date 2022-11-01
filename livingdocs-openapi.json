@@ -1101,9 +1101,7 @@
                 "type": "object",
                 "example": {
                   "reportId": "2SG2MAA9RwPn",
-                  "projectId": "1",
-                  "documentId": "1",
-                  "publicationId": "524",
+                  "publicationId": 524,
                   "deliveryHandle": "web",
                   "status": "success",
                   "message": "Message with <strong>html</strong>"
@@ -1118,14 +1116,8 @@
                     "type": "string",
                     "description": "If provided this will update the record, otherwise it will create a new one with a new reportId"
                   },
-                  "projectId": {
-                    "type": "string"
-                  },
-                  "documentId": {
-                    "type": "string"
-                  },
                   "publicationId": {
-                    "type": "string"
+                    "type": "integer"
                   },
                   "deliveryHandle": {
                     "type": "string"
