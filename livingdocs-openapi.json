@@ -4099,7 +4099,161 @@
         },
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "systemdata": {
+                      "$ref": "#/components/schemas/Systemdata"
+                    },
+                    "metadata": {
+                      "$ref": "#/components/schemas/Metadata"
+                    },
+                    "content": {
+                      "$ref": "#/components/schemas/Content"
+                    },
+                    "includes": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "componentId": {
+                            "type": "string"
+                          },
+                          "directiveName": {
+                            "type": "string"
+                          },
+                          "resolvedValue": {
+                            "type": "object",
+                            "properties": {
+                              "content": {
+                                "type": "array",
+                                "items": {
+                                  "type": "object",
+                                  "properties": {
+                                    "id": {
+                                      "type": "string"
+                                    },
+                                    "component": {
+                                      "type": "string"
+                                    },
+                                    "content": {
+                                      "type": "object"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "html": {
+                      "type": "string"
+                    }
+                  },
+                  "example": {
+                    "systemdata": {
+                      "projectId": 1,
+                      "channelId": 1,
+                      "documentId": 1,
+                      "contentType": "article",
+                      "documentType": "article",
+                      "publicationId": 1,
+                      "firstPublicationDate": "2022-03-16T14:08:11:000Z",
+                      "significantPublicationDate": "2022-10-26T07:25:00.000Z",
+                      "visiblePublicationDate": "2022-10-27T06:00:00.000Z",
+                      "updatedAt": "2023-03-18T16:32:04.170Z",
+                      "design": {
+                        "name": "timeline",
+                        "version": "1.1.0"
+                      }
+                    },
+                    "content": [
+                      {
+                        "id": "doc-1b8i1ksh10",
+                        "identifier": "timeline.head",
+                        "component": "head",
+                        "content": {
+                          "title": "a title",
+                          "text": "some lead"
+                        }
+                      },
+                      {
+                        "id": "doc-2c95a77x14",
+                        "identifier": "timeline.teaser",
+                        "component": "teaser",
+                        "content": {
+                          "embed-teaser": {
+                            "service": "embed-teaser",
+                            "params": {
+                              "document": {
+                                "'$ref'": "document",
+                                "reference": {
+                                  "id": 7
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ],
+                    "metadata": {
+                      "title": "a title",
+                      "description": "some lead",
+                      "topic": {
+                        "'$ref'": "document",
+                        "reference": {
+                          "id": "5"
+                        },
+                        "isPreloaded": true,
+                        "value": {
+                          "metadata": {
+                            "title": "Another title"
+                          },
+                          "systemdata": {
+                            "projectId": 1,
+                            "channelId": 1,
+                            "documentId": 5,
+                            "contentType": "article",
+                            "documentType": "article",
+                            "publicationId": 7,
+                            "firstPublicationDate": "2022-03-16T14:08:11:000Z",
+                            "significantPublicationDate": "2022-10-26T07:25:00.000Z",
+                            "visiblePublicationDate": "2022-10-27T06:00:00.000Z",
+                            "updatedAt": "2023-03-18T17:32:04.170Z",
+                            "design": {
+                              "name": "timeline",
+                              "version": "1.1.0"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "includes": [
+                      {
+                        "componentId": "doc-2c95a77x14",
+                        "directiveName": "embed-teaser",
+                        "resolvedValue": {
+                          "content": [
+                            {
+                              "id": "ref-7",
+                              "component": "p",
+                              "content": {
+                                "text": "Some text."
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ],
+                    "html": "<div>...</div>"
+                  }
+                }
+              }
+            }
           }
         }
       }
