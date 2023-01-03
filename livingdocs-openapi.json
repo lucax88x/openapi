@@ -1293,7 +1293,154 @@
         ],
         "responses": {
           "200": {
-            "description": "ok"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "systemdata": {
+                        "$ref": "#/components/schemas/Systemdata"
+                      },
+                      "metadata": {
+                        "$ref": "#/components/schemas/Metadata"
+                      },
+                      "content": {
+                        "$ref": "#/components/schemas/Content"
+                      }
+                    }
+                  },
+                  "example": [
+                    {
+                      "systemdata": {
+                        "projectId": 1,
+                        "channelId": 1,
+                        "documentId": 1,
+                        "contentType": "article",
+                        "documentType": "article",
+                        "publicationId": 1,
+                        "firstPublicationDate": "2022-03-16T14:08:11:000Z",
+                        "significantPublicationDate": "2022-10-26T07:25:00.000Z",
+                        "visiblePublicationDate": "2022-10-27T06:00:00.000Z",
+                        "updatedAt": "2022-10-30T16:32:04.170Z",
+                        "layout": "regular",
+                        "design": {
+                          "name": "timeline",
+                          "version": "1.1.0"
+                        }
+                      },
+                      "metadata": {
+                        "title": "a title",
+                        "description": "some lead",
+                        "dependencies": {}
+                      },
+                      "content": [
+                        {
+                          "id": "doc-1b8i1ksh10",
+                          "identifier": "timeline.head",
+                          "component": "head",
+                          "content": {
+                            "title": "a title",
+                            "text": "some lead"
+                          }
+                        },
+                        {
+                          "id": "doc-1b8i1ksh20",
+                          "identifier": "timeline.normal",
+                          "component": "normal",
+                          "content": {
+                            "caption": "my caption"
+                          },
+                          "styles": {
+                            "position": "left"
+                          }
+                        },
+                        {
+                          "id": "doc-1b8i1ksh30",
+                          "identifier": "timeline.p",
+                          "component": "p",
+                          "content": {
+                            "text": "first paragraph"
+                          }
+                        },
+                        {
+                          "id": "doc-1b8i1me1d0",
+                          "identifier": "timeline.p",
+                          "component": "p",
+                          "content": {
+                            "text": "second paragraph"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "systemdata": {
+                        "projectId": 1,
+                        "channelId": 1,
+                        "documentId": 2,
+                        "contentType": "article",
+                        "documentType": "article",
+                        "publicationId": 5,
+                        "firstPublicationDate": "2022-03-16T14:08:11:000Z",
+                        "significantPublicationDate": "2022-10-26T07:25:00.000Z",
+                        "visiblePublicationDate": "2022-10-27T06:00:00.000Z",
+                        "updatedAt": "2022-10-30T16:32:04.170Z",
+                        "layout": "regular",
+                        "design": {
+                          "name": "timeline",
+                          "version": "1.1.0"
+                        }
+                      },
+                      "metadata": {
+                        "title": "another title",
+                        "description": "some other lead",
+                        "dependencies": {}
+                      },
+                      "content": [
+                        {
+                          "id": "doc-1b8i1ksh10",
+                          "identifier": "timeline.head",
+                          "component": "head",
+                          "content": {
+                            "title": "a title",
+                            "text": "some lead"
+                          }
+                        },
+                        {
+                          "id": "doc-1b8i1ksh20",
+                          "identifier": "timeline.normal",
+                          "component": "normal",
+                          "content": {
+                            "caption": "my caption"
+                          },
+                          "styles": {
+                            "position": "left"
+                          }
+                        },
+                        {
+                          "id": "doc-1b8i1ksh30",
+                          "identifier": "timeline.p",
+                          "component": "p",
+                          "content": {
+                            "text": "first paragraph"
+                          }
+                        },
+                        {
+                          "id": "doc-1b8i1me1d0",
+                          "identifier": "timeline.p",
+                          "component": "p",
+                          "content": {
+                            "text": "second paragraph"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            }
           }
         }
       }
@@ -1444,7 +1591,173 @@
         ],
         "responses": {
           "200": {
-            "description": "ok"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "systemdata": {
+                        "$ref": "#/components/schemas/Systemdata"
+                      },
+                      "metadata": {
+                        "$ref": "#/components/schemas/Metadata"
+                      },
+                      "content": {
+                        "$ref": "#/components/schemas/Content"
+                      },
+                      "renditions": {
+                        "$ref": "#/components/schemas/References"
+                      }
+                    }
+                  },
+                  "example": [
+                    {
+                      "systemdata": {
+                        "projectId": 1,
+                        "channelId": 1,
+                        "documentId": 1,
+                        "contentType": "article",
+                        "documentType": "article",
+                        "publicationId": 1,
+                        "firstPublicationDate": "2022-03-16T14:08:11:000Z",
+                        "significantPublicationDate": "2022-10-26T07:25:00.000Z",
+                        "visiblePublicationDate": "2022-10-27T06:00:00.000Z",
+                        "updatedAt": "2022-10-30T16:32:04.170Z",
+                        "layout": "regular",
+                        "design": {
+                          "name": "timeline",
+                          "version": "1.1.0"
+                        }
+                      },
+                      "metadata": {
+                        "title": "a title",
+                        "description": "some lead",
+                        "dependencies": {}
+                      },
+                      "content": [
+                        {
+                          "id": "doc-1b8i1ksh10",
+                          "identifier": "timeline.head",
+                          "component": "head",
+                          "content": {
+                            "title": "a title",
+                            "text": "some lead"
+                          }
+                        },
+                        {
+                          "id": "doc-1b8i1ksh20",
+                          "identifier": "timeline.normal",
+                          "component": "normal",
+                          "content": {
+                            "caption": "my caption"
+                          },
+                          "styles": {
+                            "position": "left"
+                          }
+                        },
+                        {
+                          "id": "doc-1b8i1ksh30",
+                          "identifier": "timeline.p",
+                          "component": "p",
+                          "content": {
+                            "text": "first paragraph"
+                          }
+                        },
+                        {
+                          "id": "doc-1b8i1me1d0",
+                          "identifier": "timeline.p",
+                          "component": "p",
+                          "content": {
+                            "text": "second paragraph"
+                          }
+                        }
+                      ],
+                      "references": [
+                        {
+                          "id": "YbzTpusGyJtF",
+                          "type": "language-group",
+                          "location": "metadata",
+                          "propertyName": "language"
+                        }
+                      ]
+                    },
+                    {
+                      "systemdata": {
+                        "projectId": 1,
+                        "channelId": 1,
+                        "documentId": 2,
+                        "contentType": "article",
+                        "documentType": "article",
+                        "publicationId": 5,
+                        "firstPublicationDate": "2022-03-16T14:08:11:000Z",
+                        "significantPublicationDate": "2022-10-26T07:25:00.000Z",
+                        "visiblePublicationDate": "2022-10-27T06:00:00.000Z",
+                        "updatedAt": "2022-10-30T16:32:04.170Z",
+                        "layout": "regular",
+                        "design": {
+                          "name": "timeline",
+                          "version": "1.1.0"
+                        }
+                      },
+                      "metadata": {
+                        "title": "another title",
+                        "description": "some other lead",
+                        "dependencies": {}
+                      },
+                      "content": [
+                        {
+                          "id": "doc-1b8i1ksh10",
+                          "identifier": "timeline.head",
+                          "component": "head",
+                          "content": {
+                            "title": "a title",
+                            "text": "some lead"
+                          }
+                        },
+                        {
+                          "id": "doc-1b8i1ksh20",
+                          "identifier": "timeline.normal",
+                          "component": "normal",
+                          "content": {
+                            "caption": "my caption"
+                          },
+                          "styles": {
+                            "position": "left"
+                          }
+                        },
+                        {
+                          "id": "doc-1b8i1ksh30",
+                          "identifier": "timeline.p",
+                          "component": "p",
+                          "content": {
+                            "text": "first paragraph"
+                          }
+                        },
+                        {
+                          "id": "doc-1b8i1me1d0",
+                          "identifier": "timeline.p",
+                          "component": "p",
+                          "content": {
+                            "text": "second paragraph"
+                          }
+                        }
+                      ],
+                      "references": [
+                        {
+                          "id": "YbzTpusGyJtF",
+                          "type": "language-group",
+                          "location": "metadata",
+                          "propertyName": "language"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            }
           }
         }
       }
@@ -1493,7 +1806,149 @@
         ],
         "responses": {
           "200": {
-            "description": "ok"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "systemdata": {
+                      "$ref": "#/components/schemas/Systemdata"
+                    },
+                    "metadata": {
+                      "$ref": "#/components/schemas/Metadata"
+                    },
+                    "content": {
+                      "$ref": "#/components/schemas/Content"
+                    },
+                    "renditions": {
+                      "$ref": "#/components/schemas/Renditions"
+                    }
+                  },
+                  "example": {
+                    "systemdata": {
+                      "projectId": 1,
+                      "channelId": 1,
+                      "documentId": 1,
+                      "contentType": "regular",
+                      "documentType": "article",
+                      "publicationId": 1,
+                      "firstPublicationDate": "2022-03-16T14:08:11:000Z",
+                      "significantPublicationDate": "2022-10-26T07:25:00.000Z",
+                      "visiblePublicationDate": "2022-10-27T06:00:00.000Z",
+                      "updatedAt": "2023-03-18T16:32:04.170Z",
+                      "layout": "regular",
+                      "design": {
+                        "name": "timeline",
+                        "version": "1.1.0"
+                      }
+                    },
+                    "metadata": {
+                      "title": "a title",
+                      "description": "some lead",
+                      "dependencies": {}
+                    },
+                    "content": [
+                      {
+                        "id": "doc-1b8i1ksh10",
+                        "identifier": "timeline.head",
+                        "component": "head",
+                        "content": {
+                          "title": "a title",
+                          "text": "some lead"
+                        }
+                      },
+                      {
+                        "id": "doc-1b8i1ksh20",
+                        "identifier": "timeline.normal",
+                        "component": "normal",
+                        "content": {
+                          "caption": "my caption"
+                        },
+                        "styles": {
+                          "position": "left"
+                        }
+                      },
+                      {
+                        "id": "doc-1b8i1ksh30",
+                        "identifier": "timeline.p",
+                        "component": "p",
+                        "content": {
+                          "text": "first paragraph"
+                        }
+                      },
+                      {
+                        "id": "doc-1b8i1me1d0",
+                        "identifier": "timeline.p",
+                        "component": "p",
+                        "content": {
+                          "text": "second paragraph"
+                        }
+                      }
+                    ],
+                    "renditions": [
+                      {
+                        "handle": "web",
+                        "content": "<div class=\"head\">\n  <h1>a title</h1>\n  <p class=\"lead\">some lead</p>\n</div>\n<figure class=\"aspect-ratio left\">\n  <img class=\"doc-image-empty\" src=\"data:image/svg+xml;charset=UTF-8,…\">\n  <figcaption>my caption</figcaption>\n</figure>\n<p>first paragraph</p>\n<p>second</p>\n<p> and third one. :)</p>"
+                      },
+                      {
+                        "handle": "mobile",
+                        "content": {
+                          "content": [
+                            {
+                              "id": "doc-1b8i1ksh10",
+                              "identifier": "timeline.head",
+                              "component": "head",
+                              "content": {
+                                "title": "a title",
+                                "text": "some lead"
+                              }
+                            },
+                            {
+                              "id": "doc-1b8i1ksh20",
+                              "identifier": "timeline.normal",
+                              "component": "normal",
+                              "content": {
+                                "caption": "my caption"
+                              },
+                              "styles": {
+                                "position": "left"
+                              }
+                            },
+                            {
+                              "id": "doc-1b8i1ksh30",
+                              "identifier": "timeline.p",
+                              "component": "p",
+                              "content": {
+                                "text": "first paragraph"
+                              }
+                            },
+                            {
+                              "id": "doc-1b8i1me1d0",
+                              "identifier": "timeline.p",
+                              "component": "p",
+                              "content": {
+                                "text": "second paragraph"
+                              }
+                            }
+                          ],
+                          "design": {
+                            "name": "timeline",
+                            "version": "1.1.0"
+                          }
+                        }
+                      },
+                      {
+                        "handle": "app",
+                        "error": {
+                          "message": "Processing of Channel 'app' for document '1' failed. Detailed error message…"
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            }
           }
         }
       }
@@ -1542,7 +1997,160 @@
         ],
         "responses": {
           "200": {
-            "description": "ok"
+            "description": "ok",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "systemdata": {
+                      "$ref": "#/components/schemas/Systemdata"
+                    },
+                    "metadata": {
+                      "$ref": "#/components/schemas/Metadata"
+                    },
+                    "content": {
+                      "$ref": "#/components/schemas/Content"
+                    },
+                    "renditions": {
+                      "$ref": "#/components/schemas/Renditions"
+                    },
+                    "references": {
+                      "$ref": "#/components/schemas/References"
+                    }
+                  },
+                  "example": {
+                    "systemdata": {
+                      "projectId": 1,
+                      "channelId": 1,
+                      "documentId": 1,
+                      "contentType": "article",
+                      "documentType": "article",
+                      "publicationId": 1,
+                      "firstPublicationDate": "2022-03-16T14:08:11:000Z",
+                      "significantPublicationDate": "2022-10-26T07:25:00.000Z",
+                      "visiblePublicationDate": "2022-10-27T06:00:00.000Z",
+                      "updatedAt": "2023-03-18T16:32:04.170Z",
+                      "layout": "regular",
+                      "design": {
+                        "name": "timeline",
+                        "version": "1.1.0"
+                      }
+                    },
+                    "metadata": {
+                      "title": "a title",
+                      "description": "some lead",
+                      "dependencies": {}
+                    },
+                    "content": [
+                      {
+                        "id": "doc-1b8i1ksh10",
+                        "identifier": "timeline.head",
+                        "component": "head",
+                        "content": {
+                          "title": "a title",
+                          "text": "some lead"
+                        }
+                      },
+                      {
+                        "id": "doc-1b8i1ksh20",
+                        "identifier": "timeline.normal",
+                        "component": "normal",
+                        "content": {
+                          "caption": "my caption"
+                        },
+                        "styles": {
+                          "position": "left"
+                        }
+                      },
+                      {
+                        "id": "doc-1b8i1ksh30",
+                        "identifier": "timeline.p",
+                        "component": "p",
+                        "content": {
+                          "text": "first paragraph"
+                        }
+                      },
+                      {
+                        "id": "doc-1b8i1me1d0",
+                        "identifier": "timeline.p",
+                        "component": "p",
+                        "content": {
+                          "text": "second paragraph"
+                        }
+                      }
+                    ],
+                    "renditions": [
+                      {
+                        "handle": "web",
+                        "content": "<div class=\"head\">\n  <h1>a title</h1>\n  <p class=\"lead\">some lead</p>\n</div>\n<figure class=\"aspect-ratio left\">\n  <img class=\"doc-image-empty\" src=\"data:image/svg+xml;charset=UTF-8,…\">\n  <figcaption>my caption</figcaption>\n</figure>\n<p>first paragraph</p>\n<p>second</p>\n<p> and third one. :)</p>"
+                      },
+                      {
+                        "handle": "mobile",
+                        "content": {
+                          "content": [
+                            {
+                              "id": "doc-1b8i1ksh10",
+                              "identifier": "timeline.head",
+                              "component": "head",
+                              "content": {
+                                "title": "a title",
+                                "text": "some lead"
+                              }
+                            },
+                            {
+                              "id": "doc-1b8i1ksh20",
+                              "identifier": "timeline.normal",
+                              "component": "normal",
+                              "content": {
+                                "caption": "my caption"
+                              },
+                              "styles": {
+                                "position": "left"
+                              }
+                            },
+                            {
+                              "id": "doc-1b8i1ksh30",
+                              "identifier": "timeline.p",
+                              "component": "p",
+                              "content": {
+                                "text": "first paragraph"
+                              }
+                            },
+                            {
+                              "id": "doc-1b8i1me1d0",
+                              "identifier": "timeline.p",
+                              "component": "p",
+                              "content": {
+                                "text": "second paragraph"
+                              }
+                            }
+                          ],
+                          "design": {
+                            "name": "timeline",
+                            "version": "1.1.0"
+                          }
+                        }
+                      },
+                      {
+                        "handle": "app",
+                        "error": {
+                          "message": "Processing of Channel 'app' for document '1' failed. Detailed error message…"
+                        }
+                      }
+                    ],
+                    "references": [
+                      {
+                        "id": "YbzTpusGyJtF",
+                        "type": "language-group",
+                        "location": "metadata",
+                        "propertyName": "language"
+                      }
+                    ]
+                  }
+                }
+              }
+            }
           }
         }
       }
@@ -3536,6 +4144,103 @@
       }
     },
     "schemas": {
+      "Systemdata": {
+        "type": "object",
+        "properties": {
+          "projectId": {
+            "type": "number"
+          },
+          "channelId": {
+            "type": "number"
+          },
+          "documentId": {
+            "type": "number"
+          },
+          "contentType": {
+            "type": "string"
+          },
+          "documentType": {
+            "type": "string"
+          },
+          "publicationId": {
+            "type": "number"
+          },
+          "firstPublicationDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "significantPublicationDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "visiblePublicationDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "layout": {
+            "type": "string"
+          },
+          "design": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "version": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      },
+      "Metadata": {
+        "type": "object"
+      },
+      "Content": {
+        "type": "array",
+        "items": {
+          "type": "object"
+        }
+      },
+      "Renditions": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "handle": {
+              "type": "string"
+            },
+            "content": {
+              "type": "string",
+              "format": "html"
+            }
+          }
+        }
+      },
+      "References": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "type": {
+              "type": "string"
+            },
+            "location": {
+              "type": "string"
+            },
+            "propertyName": {
+              "type": "string"
+            }
+          }
+        }
+      },
       "MediaLibraryEntryAsset": {
         "type": "object",
         "additionalProperties": false,
