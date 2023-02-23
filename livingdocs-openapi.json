@@ -141,7 +141,7 @@
           "Project"
         ],
         "operationId": "getProjectionConfiguration",
-        "summary": "Get Project Configuration",
+        "summary": "Get Project Configuration (deprecated release-2023-03)",
         "description": "Your AccessToken is valid for a single project. This endpoint tells you the details and configuration of this project.",
         "responses": {
           "200": {
@@ -163,7 +163,28 @@
           "Project"
         ],
         "operationId": "getAllChannels",
-        "summary": "Get Default Channel Configuration",
+        "summary": "Get Default Channel Configuration (deprecated release-2023-03)",
+        "responses": {
+          "200": {
+            "description": "ok"
+          }
+        }
+      }
+    },
+    "/api/v1/projectConfig": {
+      "get": {
+        "security": [
+          {
+            "bearerAuth": [
+              "public-api:config:read"
+            ]
+          }
+        ],
+        "tags": [
+          "Project"
+        ],
+        "summary": "Get Project Configuration",
+        "operationId": "getProjectConfig",
         "responses": {
           "200": {
             "description": "ok"
@@ -184,7 +205,7 @@
           "Project"
         ],
         "operationId": "getChannelConfigurationByChannelHandle",
-        "summary": "Get Channel Configuration",
+        "summary": "Get Channel Configuration (deprecated 2023-03)",
         "parameters": [
           {
             "name": "channelHandle",
