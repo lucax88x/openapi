@@ -206,6 +206,7 @@
         ],
         "operationId": "getChannelConfigurationByChannelHandle",
         "summary": "Get Channel Configuration (deprecated 2023-03)",
+        "deprecated": true,
         "parameters": [
           {
             "name": "channelHandle",
