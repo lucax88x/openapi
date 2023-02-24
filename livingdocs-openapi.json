@@ -19,7 +19,7 @@
       "description": "Project",
       "externalDocs": {
         "description": "Docs",
-        "url": "docs.livingdocs.io/reference-docs/public-api/project/"
+        "url": "https://docs.livingdocs.io/reference-docs/public-api/project/"
       }
     },
     {
@@ -27,7 +27,7 @@
       "description": "",
       "externalDocs": {
         "description": "Docs",
-        "url": "docs.livingdocs.io/reference-docs/public-api/composition-api/"
+        "url": "https://docs.livingdocs.io/reference-docs/public-api/composition-api/"
       }
     },
     {
@@ -35,7 +35,7 @@
       "description": "Publications",
       "externalDocs": {
         "description": "Docs",
-        "url": "docs.livingdocs.io/reference-docs/public-api/publications/"
+        "url": "https://docs.livingdocs.io/reference-docs/public-api/publications/"
       }
     },
     {
@@ -43,7 +43,7 @@
       "description": "Search",
       "externalDocs": {
         "description": "Docs",
-        "url": "docs.livingdocs.io/reference-docs/public-api/search/"
+        "url": "https://docs.livingdocs.io/reference-docs/public-api/search/"
       }
     },
     {
@@ -51,7 +51,7 @@
       "description": "",
       "externalDocs": {
         "description": "Docs",
-        "url": "docs.livingdocs.io/reference-docs/public-api/document-lists/"
+        "url": "https://docs.livingdocs.io/reference-docs/public-api/document-lists/"
       }
     },
     {
@@ -59,7 +59,7 @@
       "description": "",
       "externalDocs": {
         "description": "Docs",
-        "url": "docs.livingdocs.io/reference-docs/public-api/document-categories/"
+        "url": "https://docs.livingdocs.io/reference-docs/public-api/document-categories/"
       }
     },
     {
@@ -67,7 +67,7 @@
       "description": "Media Library",
       "externalDocs": {
         "description": "Docs",
-        "url": "docs.livingdocs.io/reference-docs/public-api/media-library/"
+        "url": "https://docs.livingdocs.io/reference-docs/public-api/media-library/"
       }
     },
     {
@@ -75,7 +75,7 @@
       "description": "Imports",
       "externalDocs": {
         "description": "Docs",
-        "url": "docs.livingdocs.io/reference-docs/public-api/imports/"
+        "url": "https://docs.livingdocs.io/reference-docs/public-api/imports/"
       }
     },
     {
@@ -83,7 +83,7 @@
       "description": "Sitemaps",
       "externalDocs": {
         "description": "Docs",
-        "url": "docs.livingdocs.io/reference-docs/public-api/sitemaps/"
+        "url": "https://docs.livingdocs.io/reference-docs/public-api/sitemaps/"
       }
     },
     {
@@ -91,7 +91,7 @@
       "description": "Menus",
       "externalDocs": {
         "description": "Docs",
-        "url": "docs.livingdocs.io/reference-docs/public-api/menus/"
+        "url": "https://docs.livingdocs.io/reference-docs/public-api/menus/"
       }
     },
     {
@@ -99,7 +99,7 @@
       "description": "Routing",
       "externalDocs": {
         "description": "Docs",
-        "url": "docs.livingdocs.io/reference-docs/public-api/routing/"
+        "url": "https://docs.livingdocs.io/reference-docs/public-api/routing/"
       }
     },
     {
@@ -107,7 +107,7 @@
       "description": "",
       "externalDocs": {
         "description": "Docs",
-        "url": "docs.livingdocs.io/reference-docs/public-api/add-delivery-status/"
+        "url": "https://docs.livingdocs.io/reference-docs/public-api/add-delivery-status/"
       }
     },
     {
@@ -115,7 +115,7 @@
       "description": "Check API status",
       "externalDocs": {
         "description": "Docs",
-        "url": "docs.livingdocs.io/reference-docs/public-api/status/"
+        "url": "https://docs.livingdocs.io/reference-docs/public-api/status/"
       }
     },
     {
@@ -123,7 +123,7 @@
       "description": "Retresco Webhook",
       "externalDocs": {
         "description": "Docs",
-        "url": "docs.livingdocs.io/guides/integrations/retresco/"
+        "url": "https://docs.livingdocs.io/guides/integrations/retresco/"
       }
     }
   ],
@@ -163,6 +163,7 @@
           "Project"
         ],
         "operationId": "getAllChannels",
+        "description": "Get Default Channel Configuration (deprecated release-2023-03)",
         "summary": "Get Default Channel Configuration (deprecated release-2023-03)",
         "responses": {
           "200": {
@@ -184,6 +185,7 @@
           "Project"
         ],
         "summary": "Get Project Configuration",
+        "description": "Get Project Configuration",
         "operationId": "getProjectConfig",
         "responses": {
           "200": {
@@ -206,6 +208,7 @@
         ],
         "operationId": "getChannelConfigurationByChannelHandle",
         "summary": "Get Channel Configuration (deprecated 2023-03)",
+        "description": "Get Channel Configuration (deprecated 2023-03)",
         "deprecated": true,
         "parameters": [
           {
@@ -237,6 +240,7 @@
           "Project"
         ],
         "operationId": "getCurrentDesign",
+        "description": "Get Current Design",
         "summary": "Get Current Design",
         "responses": {
           "200": {
@@ -258,6 +262,7 @@
           "Project"
         ],
         "operationId": "getDesignByVersion",
+        "description": "Get Specific Design",
         "summary": "Get Specific Design",
         "parameters": [
           {
@@ -291,6 +296,7 @@
         ],
         "operationId": "searchPublications",
         "summary": "Search Publications",
+        "description": "Search Publications",
         "parameters": [
           {
             "name": "search",
@@ -388,6 +394,7 @@
         ],
         "operationId": "getDocumentListById",
         "summary": "Get List by Id",
+        "description": "Get List by Id",
         "parameters": [
           {
             "name": "id",
@@ -448,6 +455,7 @@
           "Document Lists"
         ],
         "operationId": "getAndFilterDocumentLists",
+        "description": "Get Lists",
         "summary": "Get Lists",
         "parameters": [
           {
@@ -3803,7 +3811,7 @@
         ],
         "operationId": "getSitemapIndex",
         "summary": "Get a Sitemap's Index",
-        "description": "",
+        "description": "Get a Sitemap's Index",
         "parameters": [
           {
             "name": "baseUrl",
@@ -3864,7 +3872,7 @@
         ],
         "operationId": "getSitemapEntries",
         "summary": "Get a Sitemap's Entries",
-        "description": "",
+        "description": "Get a Sitemap's Entries",
         "parameters": [
           {
             "name": "baseUrl",
@@ -3928,7 +3936,7 @@
         ],
         "operationId": "getApiStatus",
         "summary": "Check API Status",
-        "description": "",
+        "description": "Check API Status",
         "responses": {
           "200": {
             "description": "Status ok"
@@ -3948,6 +3956,7 @@
         "tags": [
           "Retresco"
         ],
+        "operationId": "retrescoReenrich",
         "summary": "Retresco re-enrich Webhook",
         "description": "This hook should be used on Retresco when enabling the re-enrich feature to trigger asynchronous document enrichment.",
         "requestBody": {
@@ -3956,7 +3965,12 @@
               "schema": {
                 "type": "object",
                 "example": {
-                  "doc_ids": [1, 2, 3, 4]
+                  "doc_ids": [
+                    1,
+                    2,
+                    3,
+                    4
+                  ]
                 },
                 "required": [
                   "doc_ids"
@@ -4265,21 +4279,6 @@
             "asset": {
               "$ref": "#/components/schemas/MediaLibraryEntryAsset"
             }
-          }
-        }
-      },
-      "ApiResponse": {
-        "type": "object",
-        "properties": {
-          "code": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "type": {
-            "type": "string"
-          },
-          "message": {
-            "type": "string"
           }
         }
       },
