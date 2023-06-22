@@ -19,7 +19,7 @@
       "description": "Project",
       "externalDocs": {
         "description": "Docs",
-        "url": "https://docs.livingdocs.io/reference-docs/public-api/project/"
+        "url": "https://docs.livingdocs.io/reference/public-api/project/"
       }
     },
     {
@@ -27,7 +27,7 @@
       "description": "",
       "externalDocs": {
         "description": "Docs",
-        "url": "https://docs.livingdocs.io/reference-docs/public-api/composition-api/"
+        "url": "https://docs.livingdocs.io/reference/public-api/composition-api/"
       }
     },
     {
@@ -35,7 +35,7 @@
       "description": "Publications",
       "externalDocs": {
         "description": "Docs",
-        "url": "https://docs.livingdocs.io/reference-docs/public-api/publications/"
+        "url": "https://docs.livingdocs.io/reference/public-api/publications/"
       }
     },
     {
@@ -43,7 +43,7 @@
       "description": "Search",
       "externalDocs": {
         "description": "Docs",
-        "url": "https://docs.livingdocs.io/reference-docs/public-api/search/"
+        "url": "https://docs.livingdocs.io/reference/public-api/search/"
       }
     },
     {
@@ -51,7 +51,7 @@
       "description": "",
       "externalDocs": {
         "description": "Docs",
-        "url": "https://docs.livingdocs.io/reference-docs/public-api/document-lists/"
+        "url": "https://docs.livingdocs.io/reference/public-api/document-lists/"
       }
     },
     {
@@ -59,7 +59,7 @@
       "description": "",
       "externalDocs": {
         "description": "Docs",
-        "url": "https://docs.livingdocs.io/reference-docs/public-api/document-categories/"
+        "url": "https://docs.livingdocs.io/reference/public-api/document-categories/"
       }
     },
     {
@@ -67,7 +67,7 @@
       "description": "Media Library",
       "externalDocs": {
         "description": "Docs",
-        "url": "https://docs.livingdocs.io/reference-docs/public-api/media-library/"
+        "url": "https://docs.livingdocs.io/reference/public-api/media-library/"
       }
     },
     {
@@ -75,7 +75,7 @@
       "description": "Imports",
       "externalDocs": {
         "description": "Docs",
-        "url": "https://docs.livingdocs.io/reference-docs/public-api/imports/"
+        "url": "https://docs.livingdocs.io/reference/public-api/imports/"
       }
     },
     {
@@ -83,7 +83,7 @@
       "description": "Sitemaps",
       "externalDocs": {
         "description": "Docs",
-        "url": "https://docs.livingdocs.io/reference-docs/public-api/sitemaps/"
+        "url": "https://docs.livingdocs.io/reference/public-api/sitemaps/"
       }
     },
     {
@@ -91,7 +91,7 @@
       "description": "Menus",
       "externalDocs": {
         "description": "Docs",
-        "url": "https://docs.livingdocs.io/reference-docs/public-api/menus/"
+        "url": "https://docs.livingdocs.io/reference/public-api/menus/"
       }
     },
     {
@@ -99,7 +99,7 @@
       "description": "Routing",
       "externalDocs": {
         "description": "Docs",
-        "url": "https://docs.livingdocs.io/reference-docs/public-api/routing/"
+        "url": "https://docs.livingdocs.io/reference/public-api/routing/"
       }
     },
     {
@@ -107,7 +107,7 @@
       "description": "",
       "externalDocs": {
         "description": "Docs",
-        "url": "https://docs.livingdocs.io/reference-docs/public-api/add-delivery-status/"
+        "url": "https://docs.livingdocs.io/reference/public-api/add-delivery-status/"
       }
     },
     {
@@ -115,7 +115,7 @@
       "description": "Check API status",
       "externalDocs": {
         "description": "Docs",
-        "url": "https://docs.livingdocs.io/reference-docs/public-api/status/"
+        "url": "https://docs.livingdocs.io/reference/public-api/health/"
       }
     },
     {
@@ -4060,7 +4060,7 @@
       "description": "demo"
     },
     {
-      "url": "https://localhost:9000/proxy/api",
+      "url": "http://localhost:9090",
       "description": "localhost"
     },
     {
