@@ -1,13 +1,13 @@
-# OpenAPI Spec
-OpenAPI 3 specficication for Livingdocs Public API
+# Livingdocs OpenAPI Specification
+OpenAPI 3 specification for Livingdocs Public API
 
 This file makes it easy to test and share our API enpoints.
 
 It's available [here](/livingdocs-openapi.json)
 
 ## Supported environments
-- service (edit.livingdocs.io)
 - localhost
+- Livingdocs demo at edit.livingdocs.io, deprecated from release-2023-09
 
 ## How to use it
 The OpenAPI spec is hosted by Github pages at: 
