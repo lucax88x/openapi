@@ -3497,12 +3497,12 @@
                   },
                   "images": [
                     {
-                      "url": "https://nerdcore.de/wp-content/uploads/2019/02/cat1.jpeg",
+                      "url": "https://placekitten.com/800/600",
                       "id": "123abc",
-                      "fileName": "foo",
+                      "fileName": "cat",
                       "mediaType": "image",
                       "metadata": {
-                        "caption": "bar"
+                        "title": "kitten"
                       }
                     }
                   ]
