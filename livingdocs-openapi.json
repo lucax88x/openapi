@@ -1576,6 +1576,14 @@
             "in": "query"
           },
           {
+            "name": "id",
+            "description": "Filter by one or multiple document ids.\n\nExample 1: `?id=12`\n\nExample 2: `?id=100,120,123` ",
+            "schema": {
+              "type": "string"
+            },
+            "in": "query"
+          },
+          {
             "name": "id.gte",
             "description": "Filter by document id range.\n\nSupported filters: `id.gte`, `id.gt`, `id.lte`, `id.lt`.\n\nThe id range filter is useful if you want to export a lot of documents. You can do many requests in parallel against the api, where you filter by the specific ranges.\n\nThis query is much more flexible than an offset-based filter and works with millions of documents.\n\nRequest 1: `?id.gt=0&id.lte=100`\n\nRequest 2: `?id.gt=100&id.lte=200`\n\nRequest 3: `?id.gt=200&id.lte=300`",
             "schema": {
@@ -1871,6 +1879,14 @@
             "schema": {
               "type": "string",
               "example": "article,page,data-record"
+            },
+            "in": "query"
+          },
+          {
+            "name": "id",
+            "description": "Filter by one or multiple document ids.\n\nExample 1: `?id=12`\n\nExample 2: `?id=100,120,123` ",
+            "schema": {
+              "type": "string"
             },
             "in": "query"
           },
