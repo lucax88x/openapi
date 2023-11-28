@@ -4856,8 +4856,7 @@
           },
           "resolveIncludes": true,
           "renderOptions": {
-            "renderDirectiveInfo": true,
-            "decodeHtml": true
+            "renderDirectiveInfo": true
           }
         },
         "properties": {
@@ -4892,9 +4891,6 @@
             "additionalProperties": false,
             "properties": {
               "renderDirectiveInfo": {
-                "type": "boolean"
-              },
-              "decodeHtml": {
                 "type": "boolean"
               }
             }
