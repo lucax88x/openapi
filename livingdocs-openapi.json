@@ -815,6 +815,10 @@
                     },
                     {
                       "operation": "archive"
+                    },
+                    {
+                      "operation": "removeAsset",
+                      "locale": "en"
                     }
                   ]
                 },
