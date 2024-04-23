@@ -3195,6 +3195,9 @@
               "application/json": {
                 "schema": {
                   "type": "array",
+                  "items": {
+                    "type": "object"
+                  },
                   "example": [
                     {
                       "id": 4,
